@@ -12,7 +12,7 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 // create  NEDB datastore
-var datastore = new nedb({filename: __dirname + '/data/banco.dat', autoload: true});
+var datastore = new nedb({filename: __dirname + '/data/cliente.dat', autoload: true});
 
 // buscar si existe registro
 datastore.find({ rut: '13049587-7' }, function (err, docs) {
