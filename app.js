@@ -29,7 +29,7 @@ datastore.find({ rut: '13049587-7' }, function (err, docs) {
               correo: "danielroapetrasic@gmail.com",
               numCuenta: "111-11111-111",
               password: "123",
-              monto: "1000000",
+              saldo: "1000000",
               movimientos: [{
                       destinatario: {
                           activo: true,
@@ -83,7 +83,7 @@ datastore.find({ rut: '13049587-7' }, function (err, docs) {
 
 // create rest api router and connect it to datastore  
 var restApi = expressNedbRest();
-restApi.addDatastore('banco', datastore);
+restApi.addDatastore('cliente', datastore);
 
 //********************************************** */
 // Configure Header HTTP 
